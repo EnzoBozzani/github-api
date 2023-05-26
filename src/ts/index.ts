@@ -1,6 +1,4 @@
-import * as bootstrap from 'bootstrap';
 import User from './User';
-import '../scss/style.scss';
 
 const usernameInput: HTMLInputElement | null = document.querySelector('#username-input');
 
@@ -17,7 +15,7 @@ async function fetchData(username: string){
 
 document.querySelector('#search-button')?.addEventListener('click', () => {
     if (usernameInput === null){
-        alert('infomre um nome de usuário validp');
+        alert('infomre um nome de usuário valido');
     } else {
         fetchData(usernameInput.value);
     }
