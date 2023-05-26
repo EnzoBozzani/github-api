@@ -67,19 +67,4 @@ export default class User implements GitHubUserResponse {
         this.updated_at = user.updated_at;
         this.url = user.url;
     }
-    renderUserCard(parentNode: any){
-        if (parentNode.hasChildNodes()){
-            for (const child of parentNode.children){
-                child.remove();
-            }
-        }
-        const card = document.createElement('div');
-        const title  = document.createElement('p');
-        title.classList.add('display-1');
-        title.textContent = this.login;
-        const img = document.createElement('img');
-        img.src = this.avatar_url;
-        card.append(title, img);
-        parentNode.appendChild(card);
-    }
 }
