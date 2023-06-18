@@ -9,7 +9,8 @@
 }
 
 #app {
-    @include flex(column, flex-start, flex-start);
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
     width: 100%;
     height: 100%;
     background-color: red;
@@ -18,9 +19,9 @@
 .page-header {
     min-width: 100vw;
     height: 8rem;
-    background-color: $dark;
-    color: $light;
-    @include flex(row, space-around, center);
+    background-color: $main;
+    color: $sec;
+    @include flex(space-around, center);
     .page-header-input {
         width: 35%;
     }
