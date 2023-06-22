@@ -1,23 +1,11 @@
-import { useState } from 'react';
-import Header from './components/Header/Header.tsx';
+import Header from './components/Header/index.tsx';
 import MainSection from './components/MainSection/index.tsx';
 import ProfileCard from './components/ProfileCard/index.tsx';
-import { UserResponse } from './UserResponse.ts';
+import useFetchUser from './hooks/useFetchUser.ts';
 
 export default function App(){
-    const [user, setUser]: [UserResponse, any] = useState(() => {
-        let u: any;
-        return u;
-    });
-    async function fetchUser(username: string) {
-        try {
-            const response = await fetch(`https://api.github.com/users/${username}`).then(res => res.json());
-            setUser(response);
-            console.log(response);
-        } catch (error: any){
-            console.error(error);
-        }
-    }
+    const {user, setUser, fetchUser} = useFetchUser();
+
     return (
         <>
             <Header fetchUser={fetchUser}/>
@@ -38,5 +26,3 @@ export default function App(){
 }
 
 
-
-//saber como integrar a lógica dos arquivos ts com o tsx
