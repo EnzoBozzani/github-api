@@ -5,8 +5,8 @@ export default function ProfileCard(props: {user: UserResponse}){
     return (
         <aside className={styles.wrapper}>
             <img src={props.user.avatar_url} alt="" />
-            <p className="display-6">{props.user.login}</p>
-            <p className={styles.username}>{props.user.name}</p>
+            <span className="display-6">{props.user.login}</span>
+            <span className={styles.username}>{props.user.name} | <a href={props.user.html_url}>{props.user.html_url}</a></span>
         </aside>
     )
 }
