@@ -12,24 +12,36 @@ export default function App() {
         <>
             <Header fetchUser={fetchUser} />
             <MainSection>
-                {user ?
+            {user ?
+                !Object.hasOwn(user, `message`) ? 
                     (
                         <>
-                            <div className='w-100'>
+                            <div className='social-section'>
                                 <ProfileCard user={user} />
                                 <SocialSection user={user} />
                             </div>
                         </>
                     )
                     :
-                    (
-                        <div className="tip-div">
-                            <p className="display-5 white-color text-center">Oops... Nothing here yet! <span className='tip-text'>Try searching a GitHub user!</span></p>
-                        </div>
-                    )}
+                    (   
+                        <>  
+                            {/* adicionar aqui o alerta que é exibido caso nenhum usuário seja enconytrado*/}
+                            <div className="tip-div">
+                                <p className="display-5 white-color text-center">Oops... Nothing here yet! <span className='tip-text'>Try searching a GitHub user!</span></p>
+                            </div>
+                        </>
+                    )
+                :
+                (   
+                    <div className="tip-div">
+                        <p className="display-5 white-color text-center">Oops... Nothing here yet! <span className='tip-text'>Try searching a GitHub user!</span></p>
+                    </div>
+                )
+            }
             </MainSection>
         </>
     )
 }
+
 
 

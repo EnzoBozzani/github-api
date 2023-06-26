@@ -13,20 +13,38 @@
         width: 40%;
         flex-direction: column;
         @include flex(center, center);
-        span {
-            border-radius: 20px;
-        }
-        input {
-            font-size: 1.1rem;
-        }
-        button {
-            background-color: $fourth;
-            border: 5px solid $fourth;
-            border-radius: 20px;
-            transition: .5s;
-            img {
-                width: 50%;
+        div {
+            width: 100%;
+            @include flex(center, center);
+            input, button, span {
+                height: 3rem;
+                background-color: $fourth;
+            }
+            span {
+                width: 10%;
+                border-radius: 10px 0 0 10px;
+                @include flex(center, center);
+                img {
+                    width: 50%;
+                }
+            }
+            input {
+                border: 0;
+                width: 80%;
+                &:focus {
+                    outline: 0;
+                }
+            }
+            button {
+                border-radius: 0 10px 10px 0;
+                border: 0;
+                width: 10%;
+                padding-right: 10px;
+                img {
+                    width: 70%;
+                }
             }
         }
+
     }
 }

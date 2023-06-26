@@ -1,7 +1,9 @@
 @import "../../scss/variables.scss";
 
 .wrapper {
-    width: 60%;
+    width: 70%;
+    height: max-content;
+    margin-top: 0;
     .social {
         @include flex(center, center);
         gap: 2rem;
