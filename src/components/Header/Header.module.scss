@@ -9,15 +9,16 @@
         width: 10%;
     }
     .form {
-        margin: 0 auto;
-        width: 40%;
+        width: 35%;
         flex-direction: column;
+        margin: 0 auto;
         @include flex(center, center);
+        gap: .5rem;
         div {
             width: 100%;
             @include flex(center, center);
             input, button, span {
-                height: 3rem;
+                height: 2.5rem;
                 background-color: $fourth;
             }
             span {
@@ -44,6 +45,12 @@
                     width: 70%;
                 }
             }
+        }
+        .userNotValid {
+            width: 100%;
+            text-align: center;
+            height: 2rem;
+            color: #ff4747;
         }
 
     }

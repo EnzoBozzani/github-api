@@ -6,11 +6,11 @@ import SocialSection from './components/SocialSection/index.tsx';
 
 
 export default function App() {
-    const { user, fetchUser } = useFetchUser();
+    const { user, fetchUser, validUsername } = useFetchUser();
 
     return (
         <>
-            <Header fetchUser={fetchUser} />
+            <Header fetchUser={fetchUser} valid={validUsername} />
             <MainSection>
             {user ?
                 !Object.hasOwn(user, `message`) ? 
@@ -25,7 +25,6 @@ export default function App() {
                     :
                     (   
                         <>  
-                            {/* adicionar aqui o alerta que é exibido caso nenhum usuário seja enconytrado*/}
                             <div className="tip-div">
                                 <p className="display-5 white-color text-center">Oops... Nothing here yet! <span className='tip-text'>Try searching a GitHub user!</span></p>
                             </div>
