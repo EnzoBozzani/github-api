@@ -4,4 +4,17 @@
     width: 80%;
     border: 2px solid $fourth;
     border-radius: 20px;
+    height: 100px;
+    .title {
+        margin: .5rem 2rem;
+        color: $terc;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .lang {
+        color: $fourth;
+        span {
+            color: $terc;
+        }
+    }
 }

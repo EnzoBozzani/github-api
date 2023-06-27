@@ -27,11 +27,17 @@ export default function SocialSection(props: {user: UserResponse}){
                     <span>Public Gists</span>
                 </div>
             </div>
-            <div>
+            <div className={styles.repos}>
+                <p className="display-6 white-color"><strong>Some Repositories</strong></p>
                 {repos.map((repo:any, index:number) => {
-                    return (
-                        <Repo repo={repo} index={index}/>
-                    )
+                    if (index > 4){
+                        return null;
+                    }
+                    else {
+                        return (
+                            <Repo repo={repo} index={index}/>
+                        )
+                    }
                 })}
             </div>
         </section>
