@@ -16,10 +16,8 @@ export default function App() {
                 !Object.hasOwn(user, `message`) ? 
                     (
                         <>
-                            <div className='social-section'>
-                                <ProfileCard user={user} />
-                                <SocialSection user={user} />
-                            </div>
+                            <ProfileCard user={user} />
+                            <SocialSection user={user} />
                         </>
                     )
                     :

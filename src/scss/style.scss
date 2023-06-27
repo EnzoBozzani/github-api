@@ -8,14 +8,15 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: #1f1f1f;
+}
+
 #root {
     @include flex(flex-start, flex-start);
     flex-direction: column;
     height: 100vh;
     background-color: #1f1f1f;
-    .social-section {
-        @include flex(start, center);
-    }
 }
 
 .white-color {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UserResponse } from '../UserResponse.ts';
+import { UserResponse } from '../types/UserResponse.ts';
 
 export default function useFetchUser() {
     const [user, setUser]: [UserResponse, any] = useState<any>();

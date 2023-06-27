@@ -3,15 +3,20 @@
 .wrapper {
     width: 70%;
     height: max-content;
-    margin-top: 0;
+    margin-top: 5rem;
     .social {
         @include flex(center, center);
-        gap: 2rem;
+        gap: 6rem;
+
         div {
             color: $fourth;
             font-size: 1.25rem;
             @include flex(center, center);
             flex-direction: column;
+
+            .number {
+                font-size: 2rem;
+            }
         }
     }
 }
