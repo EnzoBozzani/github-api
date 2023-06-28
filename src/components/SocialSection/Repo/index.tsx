@@ -3,12 +3,20 @@ import styles from "./Repo.module.scss";
 
 export default function Repo(props: {repo: RepoResponse, index: number}) {
     const r = props.repo;
+    const formatDate = (date: string) => {
+        return `${date.slice(5, 7)}/${date.slice(8, 10)}/${date.slice(0, 4)}`
+    }
     return (
-        <div className={styles.wrapper} key={props.index}>
-            <p className={styles.title}>{r.name}</p>
-            <p className={styles.lang}>
-                Main stack: <span>{r.language || 'None'}</span>
-            </p>
-        </div>  
+        <a href={r.html_url} target="_blank" className={styles.wrapper} key={props.index}>
+            <header>
+                <p className={styles.title}>{r.name}</p>
+                <p className={styles.visib}>{r.private ? 'Private' : 'Public'}</p>
+            </header>
+            <footer>
+                <span>Main Stack: <span className={styles.apiInfo}>{r.language || 'None'}</span></span>
+                <span>Created at: <span className={styles.apiInfo}>{formatDate(r.created_at)}</span></span>
+                <span>Last push: <span className={styles.apiInfo}>{formatDate(r.pushed_at)}</span></span>
+            </footer>
+        </a>  
     )
 }

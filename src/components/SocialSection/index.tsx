@@ -28,9 +28,12 @@ export default function SocialSection(props: {user: UserResponse}){
                 </div>
             </div>
             <div className={styles.repos}>
-                <p className="display-6 white-color"><strong>Some Repositories</strong></p>
+                <div className={styles.reposTitle}>
+                    <strong className="display-6">Some Repositories</strong>
+                    <span style={{color: '#ffffff5f'}}>(All Repositories at <a target="_blank" href={`https://github.com/${u.login}?tab=repositories`}>{`https://github.com/${u.login}?tab=repositories`}</a>)</span>
+                </div>
                 {repos.map((repo:any, index:number) => {
-                    if (index > 4){
+                    if (index > 5 || index === 0){
                         return null;
                     }
                     else {

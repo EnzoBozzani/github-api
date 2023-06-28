@@ -24,6 +24,7 @@ export default function App() {
                     (   
                         <>  
                             <div className="tip-div">
+                                <img src="/arrow.png" alt="" />
                                 <p className="display-5 white-color text-center">Oops... Nothing here yet! <span className='tip-text'>Try searching a GitHub user!</span></p>
                             </div>
                         </>
@@ -31,6 +32,7 @@ export default function App() {
                 :
                 (   
                     <div className="tip-div">
+                        <img src="/arrow.png" alt="" />
                         <p className="display-5 white-color text-center">Oops... Nothing here yet! <span className='tip-text'>Try searching a GitHub user!</span></p>
                     </div>
                 )

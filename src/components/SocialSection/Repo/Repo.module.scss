@@ -1,19 +1,34 @@
 @import "../../../scss/variables.scss";
 
 .wrapper {
+    background-color: $sec;
     width: 80%;
-    border: 2px solid $fourth;
-    border-radius: 20px;
+    border: 1px solid $terc;
+    border-radius: 10px;
     height: 100px;
-    .title {
-        margin: .5rem 2rem;
-        color: $terc;
-        font-weight: bold;
-        font-size: 1.5rem;
+    text-decoration: none;
+    header {
+        width: 100%;
+        @include flex(space-between, center);
+        .title {
+            margin: .5rem 2rem;
+            color: $terc;
+            font-weight: bold;
+            font-size: 1.35rem;
+        }
+        .visib {
+            margin: .5rem 2rem;
+            border: 1px solid $grey;
+            border-radius: 50px;
+            padding: 3.75px 7.5px;
+            color: $grey;
+        }
     }
-    .lang {
+    footer {
+        @include flex(space-evenly, end);
+        margin-top: 1rem;
         color: $fourth;
-        span {
+        .apiInfo {
             color: $terc;
         }
     }

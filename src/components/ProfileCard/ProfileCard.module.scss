@@ -11,11 +11,21 @@
         width: 70%;
     }
     .username {
-        color: #ffffff5f;
+        color: $grey;
     }
     .bio {
         padding: 1rem;
         text-align: center;
         color: $fourth;
+    }
+    .geralInfo {
+        width: 80%;
+        @include flex(start, center);
+        color: $grey;
+        gap: .5rem;
+        img {
+            width: 23px;
+            margin-right: .25rem;
+        }
     }
 }

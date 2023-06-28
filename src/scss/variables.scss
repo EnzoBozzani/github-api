@@ -1,7 +1,8 @@
-$main: #1b2223;
-$sec: #3a4f50;
+$main: #1f1f1f;
+$sec: #000;
 $terc: #007bff;
 $fourth: #f4fefd;
+$grey: #ffffff5f;
 
 @mixin flex($jc, $ai){
     display: flex;
