@@ -30,7 +30,8 @@
                 }
             }
             input {
-                border: 0;
+                border: none;
+                border-right: none;
                 width: 80%;
                 color: $main;
                 &:focus {

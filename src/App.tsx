@@ -2,7 +2,7 @@ import useFetchUser from './hooks/useFetchUser.ts';
 import Header from './components/Header/index.tsx';
 import MainSection from './components/MainSection/index.tsx';
 import ProfileCard from './components/ProfileCard/index.tsx';
-import SocialSection from './components/SocialSection/index.tsx';
+import SocialSection from './components/ReposSection/index.tsx';
 
 
 export default function App() {

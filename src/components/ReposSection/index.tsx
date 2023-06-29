@@ -1,4 +1,4 @@
-import styles from "./SocialSection.module.scss";
+import styles from "./ReposSection.module.scss";
 import { UserResponse } from "../../types/UserResponse";
 import useFetchRepos from "../../hooks/useFetchRepos";
 import Repo from "./Repo";
@@ -47,4 +47,5 @@ export default function SocialSection(props: {user: UserResponse}){
     )
 }
 
-//colocar todas as informações dos usuários e dos repositórios
+//se o numDeRepos === 0, printa Oops..., senão printa os Repos
+//caso alguma informação não exista, colocar Non-Informed {u.info || 'Non-Informed'} -> para todas as infos

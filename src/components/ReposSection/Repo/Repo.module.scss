@@ -7,6 +7,7 @@
     border-radius: 10px;
     height: 100px;
     text-decoration: none;
+    transition: .5s;
     header {
         width: 100%;
         @include flex(space-between, center);
@@ -31,5 +32,8 @@
         .apiInfo {
             color: $terc;
         }
+    }
+    &:hover {
+        transform: translate(-10px, -10px);
     }
 }

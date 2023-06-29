@@ -3,7 +3,7 @@
 .wrapper {
     width: 70%;
     height: max-content;
-    margin-top: 5rem;
+    margin-top: 1rem;
     .social {
         @include flex(center, center);
         gap: 6rem;
