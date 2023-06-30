@@ -1,13 +1,13 @@
 import RepoResponse from "../../../types/RepoResponse";
 import styles from "./Repo.module.scss";
 
-export default function Repo(props: {repo: RepoResponse, index: number}) {
+export default function Repo(props: {repo: RepoResponse, k: number}) {
     const r = props.repo;
     const formatDate = (date: string) => {
         return `${date.slice(5, 7)}/${date.slice(8, 10)}/${date.slice(0, 4)}`
     }
     return (
-        <a href={r.html_url} target="_blank" className={styles.wrapper} key={props.index}>
+        <a href={r.html_url} target="_blank" className={styles.wrapper} key={props.k}>
             <header>
                 <p className={styles.title}>{r.name}</p>
                 <p className={styles.visib}>{r.private ? 'Private' : 'Public'}</p>
