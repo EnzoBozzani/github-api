@@ -4,6 +4,7 @@ import MainSection from './components/MainSection/index.tsx';
 import ProfileCard from './components/ProfileCard/index.tsx';
 import SocialSection from './components/ReposSection/index.tsx';
 import FollowSection from './components/FollowSection/index.tsx';
+import Footer from "./components/Footer/index.tsx";
 
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
                 )
             }
             </MainSection>
+            <Footer/>
         </>
     )
 }

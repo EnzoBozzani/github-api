@@ -30,18 +30,41 @@ export default function ReposSection(props: {user: UserResponse}){
             <div className={styles.repos}>
                 <div className={styles.reposTitle}>
                     <strong className="display-6">Some Repositories</strong>
-                    <span style={{color: '#ffffff5f'}}>(All Repositories at <a target="_blank" href={`https://github.com/${u.login}?tab=repositories`}>{`https://github.com/${u.login}?tab=repositories`}</a>)</span>
+                    {
+                        repos.length !== 0 ?
+                            (
+                                <span style={{color: '#ffffff5f'}}>(All Repositories at <a target="_blank" href={`https://github.com/${u.login}?tab=repositories`}>{`https://github.com/${u.login}?tab=repositories`}</a>)</span>
+                            )
+                            : 
+                            (
+                                null
+                            )
+                    }
                 </div>
-                {repos.map((repo:any, i:number) => {
-                    if (i > 5 || i === 0){
-                        return null;
-                    }
-                    else {
-                        return (
-                            <Repo repo={repo}/>
+                {
+                    repos.length !== 0 ?
+                        (
+                        <>
+                            {repos.map((repo:any, i:number) => {
+                                if (i > 5 || i === 0){
+                                    return null;
+                                }
+                                else {
+                                    return (<Repo repo={repo}/>)
+                                }
+                            })}
+                        </>
                         )
-                    }
-                })}
+                        :
+                        (
+                            <>
+                                <img src="/empty.svg" alt="" className={styles.noReposImg}/>
+                                <p className={styles.noRepos}>
+                                    This user doesn't have repositories :(
+                                </p>
+                            </>
+                        )
+                }
             </div>
         </section>
     )

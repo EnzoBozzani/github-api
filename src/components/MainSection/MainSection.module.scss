@@ -2,7 +2,7 @@
 
 .wrapper {
     width: 100%;
-    min-height: 100%;
+    flex: auto;
     background-color: $main;
     @include flex(start, start);
     flex-wrap: wrap;

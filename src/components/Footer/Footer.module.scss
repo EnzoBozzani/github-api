@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+
+.wrapper {
+    margin-top: 5rem;
+    width: 100%;
+    @include flex(center, center);
+    gap: .3rem;
+    padding: 1rem 0;
+    span {
+        color: $fourth;
+        font-size: 1.1rem;
+        cursor: default;
+    }
+    a {
+        text-decoration: none;
+        color: $fourth;
+        &:hover {
+            color: #bbbbbb;
+        }
+    }
+}
