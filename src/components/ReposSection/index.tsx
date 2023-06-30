@@ -38,7 +38,7 @@ export default function ReposSection(props: {user: UserResponse}){
                     }
                     else {
                         return (
-                            <Repo repo={repo} k={i}/>
+                            <Repo repo={repo}/>
                         )
                     }
                 })}

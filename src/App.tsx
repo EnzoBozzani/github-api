@@ -3,6 +3,7 @@ import Header from './components/Header/index.tsx';
 import MainSection from './components/MainSection/index.tsx';
 import ProfileCard from './components/ProfileCard/index.tsx';
 import SocialSection from './components/ReposSection/index.tsx';
+import FollowSection from './components/FollowSection/index.tsx';
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
                         <>
                             <ProfileCard user={user} />
                             <SocialSection user={user} />
+                            <FollowSection user={user}/>
                         </>
                     )
                     :

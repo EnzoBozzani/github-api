@@ -1,0 +1,28 @@
+@import "../../../scss/variables.scss";
+
+.wrapper {
+    width: 23%;
+    border: 2px solid $fourth;
+    border-radius: 10px;
+    box-shadow:  5px 5px 5px #363636;
+    padding: 2rem;
+    @include flex(center, center);
+    flex-direction: column;
+    background-color: #060606;
+    transition: .5s;
+    text-decoration: none;
+    img {
+        border-radius: 10px;
+        width: 70%;
+    }
+    .tip {
+        color: $grey;
+    }
+    &:hover {
+        transform: translate(0, -20px);
+        border-color: $terc;
+        p {
+            color: $terc;
+        }
+    }
+}
