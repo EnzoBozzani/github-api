@@ -10,6 +10,7 @@ export default function Repo(props: {repo: RepoResponse}) {
         <a href={r.html_url} target="_blank" className={styles.wrapper} key={r.id}>
             <header>
                 <p className={styles.title}>{r.name}</p>
+                <p className={styles.tip}>Click to go to repository!</p>
                 <p className={styles.visib}>{r.private ? 'Private' : 'Public'}</p>
             </header>
             <footer>

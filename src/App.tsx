@@ -8,7 +8,7 @@ import Footer from "./components/Footer/index.tsx";
 
 
 export default function App() {
-    const { user, fetchUser, validUsername } = useFetchUser();
+    const { user, fetchUser, validUsername} = useFetchUser();
 
     return (
         <>
@@ -20,7 +20,7 @@ export default function App() {
                         <>
                             <ProfileCard user={user} />
                             <SocialSection user={user} />
-                            <FollowSection user={user}/>
+                            <FollowSection user={user} fetchUser={fetchUser}/>
                         </>
                     )
                     :

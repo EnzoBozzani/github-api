@@ -1,13 +1,13 @@
 import { FollowerResponse } from "../../../types/FollowerResponse";
 import styles from "./styles.module.scss";
 
-const UserCard = (props: {user: FollowerResponse}) => {
+const UserCard = (props: {user: FollowerResponse, fetchUser: Function}) => {
     return (
-        <a key={props.user.id} className={styles.wrapper} href={props.user.html_url}>
+        <div key={props.user.id} className={styles.wrapper} onClick={() => props.fetchUser(props.user.login)}>
             <img src={props.user.avatar_url} alt="" />
             <p className="display-6 white-color">{props.user.login}</p>
-            <p className={styles.tip}>Click to go to GitHub profile!</p>
-        </a>
+            <p className={styles.tip}>Click to search this profile!</p>
+        </div>
     )
 }
 

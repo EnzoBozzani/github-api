@@ -21,3 +21,16 @@
         flex-wrap: wrap;
     }
 }
+
+.noFollowers {
+    margin: 3rem;
+    @include flex(center, center);
+    gap: 2rem;
+    img {
+        width: 300px;
+    }
+    p {
+        font-size: 2rem;
+        color: $terc;
+    }
+}

@@ -18,5 +18,5 @@ export default function useFetchUser() {
             console.error(error);
         }
     }
-    return { user, fetchUser, validUsername};
+    return { user, fetchUser, validUsername, setUser};
 }
