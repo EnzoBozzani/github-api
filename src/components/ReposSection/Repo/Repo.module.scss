@@ -1,12 +1,12 @@
 @import "../../../scss/variables.scss";
 
 .wrapper {
+    height: 120px;
     background-color: $sec;
-    width: 80%;
+    width: 95%;
     border: 1px solid $terc;
     border-radius: 10px;
     box-shadow:  5px 5px 5px #404040;
-    height: 100px;
     text-decoration: none;
     transition: .5s;
     header {
@@ -32,6 +32,7 @@
     footer {
         @include flex(space-evenly, end);
         margin-top: 1rem;
+        margin-bottom: .5rem;
         color: $fourth;
         .apiInfo {
             color: $terc;

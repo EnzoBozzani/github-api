@@ -1,7 +1,7 @@
 import { UserResponse } from "../../types/UserResponse";
 import styles from "./ProfileCard.module.scss";
 
-export default function ProfileCard(props: {user: UserResponse}){
+export default function ProfileCard(props: { user: UserResponse }) {
     const u = props.user;
     const formatDate = (date: string) => {
         return `${date.slice(5, 7)}/${date.slice(8, 10)}/${date.slice(0, 4)}`
@@ -9,8 +9,10 @@ export default function ProfileCard(props: {user: UserResponse}){
     return (
         <aside className={styles.wrapper}>
             <img src={u.avatar_url} alt="" />
-            <span className="display-6"><strong>{u.login}</strong></span>
-            <span className={styles.username}>{u.name  ? u.name : u.login} | <a href={u.html_url}>{u.html_url}</a></span>
+            <div className={styles.child1}>
+                <span className="display-6"><strong>{u.login}</strong></span>
+                <span className={styles.username}>{u.name ? u.name : u.login} | <a href={u.html_url}>{u.html_url}</a></span>
+            </div>
             <span className={styles.bio}>{u.bio || "Oops... This user doesn't have a bio :("}</span>
             <div className={styles.geralInfo}>
                 <div>
@@ -23,5 +25,5 @@ export default function ProfileCard(props: {user: UserResponse}){
                 <span>Account created at {formatDate(u.created_at)}</span>
             </div>
         </aside>
-    )   
+    )
 }
