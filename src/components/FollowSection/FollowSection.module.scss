@@ -18,6 +18,7 @@
     .followers {
         width: 100%;
         @include flex(space-evenly, center);
+        gap: 3rem 0;
         flex-wrap: wrap;
     }
 }

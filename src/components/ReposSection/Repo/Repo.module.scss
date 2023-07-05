@@ -1,7 +1,7 @@
 @import "../../../scss/variables.scss";
 
 .wrapper {
-    height: 120px;
+    min-height: 120px;
     background-color: $sec;
     width: 95%;
     border: 1px solid $terc;
@@ -40,5 +40,16 @@
     }
     &:hover {
         transform: translate(-10px, -10px);
+    }
+    @media screen and (max-width: 630px){
+        .title {
+            font-size: 1rem;
+        }
+        .tip, .visib, footer {
+            font-size: .8rem;
+        }
+        footer {
+            margin-left: 1rem;
+        }
     }
 }

@@ -26,4 +26,10 @@
             color: $terc;
         }
     }
+    @media screen and (max-width: 1250px){
+        width: 47%;
+    }
+    @media screen and (max-width:570px){
+        width: 90%;
+    }
 }
